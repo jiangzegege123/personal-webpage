@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+
+}
+
+.beijing {
+  position: fixed;
+  bottom: 0;
+  width: 36%;
+  right: 0;
+  z-index: -1;
+}
+
+.logo {
+  float: left;
+  height: 100px;
+  width: 200px;
+  background-image: url("images/logo.jpg");
+  background-position: -80px -90px;
+}
+
+
+.w {
+  margin: auto;
+  width: 1200px;
+}
+
+.bao {
+  height: 100px;
+}
+
+.header {
+  height: 100px;
+  float: left;
+  width: 700px;
+  margin: 0;
+
+}
+
+
+.toppy {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  margin: -600px;
+  width: 1200px;
+  background-color: #fff;
+}
+
+.header {
+  margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header li a:hover {
+  color: #EBAF3F;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;
+}
+
+.header li {
+  float: left;
+  line-height: 100px;
+  padding: 0 30px;
+  font-size: large;
+
+}
+
+
+
+.active {
+  background-color: #aca19c;
+}
+
+
+.aboutme {
+  margin-top: 100px;
+  height: 350px;
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
+.aboutme p {
+  padding: 20px 20px;
+  padding-bottom: 0px;
+}
+
+.photo {
+  margin-top: 20px;
+  height: 350px;
+  background-color: rgb(0, 0, 0, 0.1);
+
+
+}
+
+
+
+.big {
+  position: absolute;
+  left: 50%;
+  width: 800px;
+  top: 100px;
+  margin-left: -450px;
+  z-index: 10000;
+  width: 80%;
+  display: none;
+}
+
+.big img {
+  width: 80%;
+}
+
+.anime ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.photo ul {}
+
+.photo li {
+  float: left;
+  margin-top: 50px;
+}
+
+
+
+.photo li img {
+  height: 250px;
+  width: 400px;
+}
+
+.anime {
+  height: 350px;
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
+.anime li {
+  float: left;
+  margin: 25px;
+}
+
+.anime a {
+  display: block;
+  width: 200px;
+  height: 300px;
+  background-color: green;
+}
+
+.anime img {
+  width: 100%;
+  height: 100%;
+}
+
+.mylinks ul {
+  width: 800px;
+  height: 230px;
+
+}
+
+.mylinks a {
+  display: block;
+  float: left;
+  width: 360px;
+  height: 100px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+h3 {
+  padding-top: 30px;
+  line-height: 50px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+}
+
+.square img {
+  width: 100%;
+  height: 100%;
+}
+
+.square p {
+  position: absolute;
+  line-height: 40px;
+  top: 0;
+  left: 120px;
+  font-size: 25px;
+
+}
+
+/* }
+
+.hide {
+  position: fixed;
+  height: 100px;
+  width: 2000px;
+  background-color: #fff;
+  top: 0;
+  margin: 0 auto;
+  display: none;
+} */
+
+
+.anime li:hover {
+  margin-top: 15px;
+}
+
+
+.time {
+  float: right;
+  height: 100px;
+  width: 250px;
+  line-height: 100px;
+  text-align: center;
+  margin-right: 10px;
+
+}
+
+.hour {
+  float: left;
+  background-color: #E5E5E5;
+  border-radius: 80px;
+  width: 65px;
+}
+
+.minute {
+  float: left;
+  background-color: #E5E5E5;
+  border-radius: 80px;
+  width: 65px;
+}
+
+.second {
+  float: left;
+  background-color: #E5E5E5;
+  border-radius: 80px;
+  width: 65px;
+}
+
+.maohao {
+  float: left;
+}
+
+.title {
+  float: left;
+  margin-left: 120px;
+  width: 550px;
+  height: 100px;
+}
+
+.title img {
+  width: 100%;
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John's Secret Garden</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logo.ico" />
+</head>
+
+<body>
+  <div class="hide"></div>
+  <div class="w">
+
+    <div class="big"><img src="images/1.jpg" alt=""></div>
+
+
+    <header class="w">
+
+
+      <div class="logo"></div>
+
+      <div class="title">
+        <img src="images/title.jpg" alt="">
+      </div>
+
+
+      <div class="time">
+        <div class="hour"></div>
+        <div class="maohao">:</div>
+        <div class="minute"></div>
+        <div class="maohao">:</div>
+        <div class="second"></div>
+      </div>
+
+  </div>
+  </header>
+  <img class="beijing" src="images/background.jpg">
+
+  <div class="photo w">
+    <ul>
+      <li><img data-id="1" src="images/1.jpg"></li>
+      <li><img data-id="2" src="images/2.jpg"></li>
+      <li><img data-id="3" src="images/3.jpg"></li>
+    </ul>
+
+  </div>
+
+  <div class="bao w">
+
+    <div class="header w">
+
+      <ul>
+        <li class="active"><a href="#" data-id="home">Home</a></li>
+        <li><a href="#" data-id="photo">Photo Album</a></li>
+
+        <li><a href="#" data-id="aboutme">About Me </a></li>
+        <li><a href="#" data-id="anime">Anime</a></li>
+        <li><a href="#" data-id="mylinks">My Links</a></li>
+
+      </ul>
+    </div>
+
+
+
+  </div>
+
+  <div class="aboutme w">
+
+    <p>
+      Hello, everyone! My name is Zhou Jiangze. I am currently pursuing my master's degree in IT at the University of
+      New
+      South Wales. I come from China.</p>
+    <p>In my free time, I enjoy spending time with cats, as they bring so much joy into my life. I am also a big fan
+      of
+      Japanese anime; I love the creativity and storytelling in those shows. Music is another passion of mine, whether
+      it's
+      listening to my favorite songs or playing an instrument.</p>
+    <p>Additionally, I really enjoy hiking and exploring the beautiful landscapes around me. It’s a great way to relax
+      and
+      connect with nature.</p>
+    <p>
+      I’m looking forward to meeting new friends and sharing our interests together!
+    </p>
+  </div>
+
+  <h3 class="w">Anime Recommendations </h3>
+  <div class="anime w">
+
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/A_Certain_Scientific_Railgun"><img src="images/animes/1.webp"></a>
+      </li>
+      <li><a href="https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%96%E3%82%B5%E3%82%A4%E3%82%B3100"><img
+            src="images/animes/2.webp"></a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen"><img src="images/animes/3.webp"></a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Akame_ga_Kill!"><img src="images/animes/4.webp"></a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba"><img src="images/animes/5.webp"></a>
+      </li>
+      <li><a href="https://en.wikipedia.org/wiki/Fullmetal_Alchemist"><img src="images/animes/6.webp"></a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Spirited_Away"><img src="images/animes/7.webp"></a></li>
+      <li><a href="https://en.wikipedia.org/wiki/The_Disastrous_Life_of_Saiki_K."><img src="images/animes/8.webp"></a>
+      </li>
+      <li><a href="#"><img src="images/animes/9.webp"></a></li>
+      <li><a href="#"><img src="images/animes/10.webp"></a></li>
+
+    </ul>
+  </div>
+
+  <div class="center w"></div>
+
+  <div class="mylinks w">
+    <h3>CONTACTS</h3>
+    <ul>
+      <li><a href="https://www.xiaohongshu.com/user/profile/5a8ab00f4eacab49ecb8d961">
+          <div class="square"><img src="images/LOGOS/1.png" alt="">
+            <p>zhoujiangze123</p>
+          </div>
+        </a></li>
+      <li><a href="https://www.instagram.com/jonathan__zhou/">
+          <div class="square"><img src="images/LOGOS/2.webp" alt="">
+            <p>jonathan__zhou</p>
+          </div>
+        </a></li>
+      <li><a href="https://www.facebook.com/zhoujiangze123/">
+          <div class="square"><img src="images/LOGOS/3.jpg" alt="">
+            <p>JiangzeZhou</p>
+          </div>
+        </a></li>
+      <li><a href="https://www.tiktok.com/@jonathanzhou0416?lang=en">
+          <div class="square"><img src="images/LOGOS/4.png" alt="">
+            <p>jonathanzhou0416</p>
+          </div>
+        </a></li>
+    </ul>
+
+  </div>
+  </div>
+
+  <script>
+
+    // 1. fixed header
+
+    const header = document.querySelector(".header")
+    const gao = header.offsetTop
+    console.log(gao)
+
+    addEventListener("scroll", function () {
+      const height = document.documentElement.scrollTop
+      console.log(height)
+      console.log(gao)
+
+      if (height > 530) {
+
+
+        header.classList.add("toppy")
+      }
+      else {
+        header.classList.remove("toppy")
+
+
+      }
+    })
+
+    // 2. clickscroll
+    header.addEventListener("click", function (e) {
+      let tt
+      if (e.target.tagName === "A") {
+        e.preventDefault()
+        const tar = document.querySelector(`.${e.target.dataset.id}`)
+        if (e.target.dataset.id === "photo") {
+          tt = tar.offsetTop
+        }
+        else if (e.target.dataset.id === "home") {
+          tt = 0
+        }
+        else {
+          tt = tar.offsetTop
+          tt -= 140
+        }
+        console.log(tt)
+        window.scrollTo({
+          top: tt,
+          behavior: 'smooth' // 设置为平滑滚动
+        });
+
+      }
+    })
+
+    // 3. highlighted li header
+    const aboutme = document.querySelector(".aboutme")
+    const aboutmeTop = aboutme.offsetTop - 200
+    const anime = document.querySelector(".anime")
+    const animeTop = anime.offsetTop - 200
+    const photo = document.querySelector(".photo")
+    const photoTop = photo.offsetTop
+    const mylinks = document.querySelector(".mylinks")
+    const mylinksTop = mylinks.offsetTop - 400
+
+    document.addEventListener("scroll", function () {
+      const ttt = document.documentElement.scrollTop
+      console.log(ttt)
+      const li = document.querySelectorAll(".header li")
+      for (let i = 0; i < li.length; i++) {
+        li[i].classList.remove("active")
+      }
+
+      if (ttt < photoTop) {
+        li[0].classList.add("active")
+      }
+      else if (ttt >= photoTop && ttt < aboutmeTop) {
+        li[1].classList.add("active")
+
+      }
+      else if (ttt >= aboutmeTop && ttt < animeTop) {
+        li[2].classList.add("active")
+
+      } else if (ttt >= animeTop && ttt < mylinksTop) {
+        li[3].classList.add("active")
+
+      }
+
+      else if (ttt >= mylinksTop) {
+        li[4].classList.add("active")
+
+      }
+
+
+    })
+
+
+    // 4. clock
+
+    const interval = setInterval(function () {
+      const now = new Date()
+      const hour = String(now.getHours()).padStart(2, '0')
+      const minute = String(now.getMinutes()).padStart(2, '0')
+      const second = String(now.getSeconds()).padStart(2, '0')
+
+      const timehour = document.querySelector(".hour")
+      const timeminute = document.querySelector(".minute")
+      const timesecond = document.querySelector(".second")
+
+      timehour.innerHTML = `${hour}`
+      timeminute.innerHTML = `${minute}`
+      timesecond.innerHTML = `${second}`
+
+    }, 1000)
+
+    // 5. slider
+
+    const sliderData = [
+      "images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg"
+    ]
+    let i = 0
+    let pic1 = 0
+    let pic2 = 1
+    let pic3 = 2
+
+    const img = document.querySelectorAll(".photo img")
+
+    let slide = setInterval(function () {
+      // console.log(img[i])
+      // console.log(img[i + 1])
+      // console.log(img[i + 2])
+
+      // console.log(sliderData[pic1])
+      // console.log(sliderData[pic2])
+      // console.log(sliderData[pic3])
+
+      // img[i + 1].src = sliderData[i + 1]
+      pic1 = (pic1 + 1) % sliderData.length
+      pic2 = (pic2 + 1) % sliderData.length
+      pic3 = (pic3 + 1) % sliderData.length
+
+      img[i].src = sliderData[pic1]
+      img[i + 1].src = sliderData[pic2]
+      img[i + 2].src = sliderData[pic3]
+
+    }, 1000)
+
+
+    photo.addEventListener('mouseenter', function () {
+      clearInterval(slide)
+    })
+
+
+    photo.addEventListener('mouseleave', function () {
+      slide = setInterval(function () {
+        // console.log(img[i])
+        // console.log(img[i + 1])
+        // console.log(img[i + 2])
+
+        // console.log(sliderData[pic1])
+        // console.log(sliderData[pic2])
+        // console.log(sliderData[pic3])
+
+        // img[i + 1].src = sliderData[i + 1]
+        pic1 = (pic1 + 1) % sliderData.length
+        pic2 = (pic2 + 1) % sliderData.length
+        pic3 = (pic3 + 1) % sliderData.length
+
+        img[i].src = sliderData[pic1]
+        img[i + 1].src = sliderData[pic2]
+        img[i + 2].src = sliderData[pic3]
+
+      }, 1000)
+    })
+    // for (let i = 0; i < liimg.length; i++) {
+    //   liimg[i].style.left = `${i * 400}px`
+    // }
+
+    // let slide = setInterval(function () {
+    //   for (let i = 0; i < liimg.length; i++) {
+    //     let currentLeft = parseInt(liimg[i].style.left);
+    //     if (currentLeft === -400) {
+    //       currentLeft = 2000
+    //     }
+    //     if (currentLeft < 0 || currentLeft >= 2000) {
+    //       liimg[i].style.display = " none"
+    //     }
+    //     else {
+    //       liimg[i].style.display = " block"
+
+    //     }
+
+    //     liimg[i].style.left = `${currentLeft - 400}px`
+    //   }
+    // }, 3000)
+
+    // // 启动滑动
+    // sliding = requestAnimationFrame(slide);
+
+    // // 停止滑动
+    // const photoContainer = document.querySelector(".photo");
+    // photoContainer.addEventListener("mouseover", function () {
+    //   cancelAnimationFrame(sliding); // 停止滑动
+    // });
+
+
+    // let slide = setInterval(function () {
+    //   for (let i = middlepoint; i < img.length; i++) {
+    //     img[i].src = sliderData[i]
+    //   }
+    //   for (let i = 0; i < middlepoint; i++) {
+    //     img[i].src = sliderData[i]
+    //   }
+    //   middlepoint++
+    // }, 1000
+    // )
+
+    // 6. enlarge  
+    const box = document.querySelector(".big")
+    const big = document.querySelector(".big img")
+    let a
+
+    photo.addEventListener("click", function (e) {
+      if (e.target.tagName = "IMG") {
+        a = e.target.src
+      }
+
+      big.src = a
+      box.style.display = "block"
+
+    })
+
+    box.addEventListener("click", function () {
+      box.style.display = "none"
+    })
+  </script>
+
+</body>
+
+</html>
