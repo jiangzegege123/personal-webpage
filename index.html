@@ -137,6 +137,10 @@
   </div>
   </div>
 
+  <footer class="w">
+
+  </footer>
+
   <script>
 
     // 1. fixed header
@@ -173,6 +177,11 @@
         }
         else if (e.target.dataset.id === "home") {
           tt = 0
+
+        }
+        else if (e.target.dataset.id === "mylinks") {
+          tt = tar.offsetTop
+          tt -= 110
         }
         else {
           tt = tar.offsetTop
